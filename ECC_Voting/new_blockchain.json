@@ -1,0 +1,47 @@
+[
+    {
+        "index": 0,
+        "timestamp": 1748634012.8755624,
+        "voter_id": "0",
+        "encrypted_vote": "GENESIS",
+        "signature": "GENESIS",
+        "previous_hash": "0",
+        "hash": "b96003cfb94286e8f1bed5b035cbe3d6b4bcaf44b1e513cdbbaf17860c45cc8e"
+    },
+    {
+        "index": 1,
+        "timestamp": 1748634311.3313327,
+        "voter_id": 21,
+        "encrypted_vote": "g1ET29PCMwkMM8X1vqgrg53hIdw2S10KcDiIO/BRHyo=",
+        "signature": "MGYCMQCWoPYd5w17sbcAWtsp687OcXF7zTkRDkZADFyrY5lvHDwm3/ildSA3F3KQyBGNlIMCMQCmwxK87xpPxc19T/61wTOY/EhZ/kvgD3LYAKLDEJmbiRdn+rc4I7gaCtNCTTsNfMA=",
+        "previous_hash": "b96003cfb94286e8f1bed5b035cbe3d6b4bcaf44b1e513cdbbaf17860c45cc8e",
+        "hash": "4636b2a4ff0f8c56f35b4fc3a0cb9555894b3f1e2672621439da642edf86274f"
+    },
+    {
+        "index": 2,
+        "timestamp": 1748665508.3617544,
+        "voter_id": 22,
+        "encrypted_vote": "TYE+4fgPctoZlXmAydOwYf7zZmtcfPoEnQtnqRoZyB8=",
+        "signature": "MGUCMFmRq51R7uRWkFsRGt3twCbLVCtTFFwQb5dnjKWJuux+Q00jE+ig23/6lA3N3vxlvAIxAODzsn2Z31eAEogsALoG3DjTr5gKG9K1kNeOBysTFT9JdYGImFzrzuw8C13kfbt7Hg==",
+        "previous_hash": "4636b2a4ff0f8c56f35b4fc3a0cb9555894b3f1e2672621439da642edf86274f",
+        "hash": "2c9917b19b210b6ec72de04e019d50dcd5c37b1f0a991877758e1e21f3a39254"
+    },
+    {
+        "index": 3,
+        "timestamp": 1748672088.3518376,
+        "voter_id": 23,
+        "encrypted_vote": "ofUJ94lNmgRNnBv4FHfv62E5HdPc7VHKYN9n/AvtWJU=",
+        "signature": "MGUCMQCttFLw4RXCFUU6v08W58eUSAl6PDPPfmXBSdeWhBo9xUok218TYeroqnKT6C91GucCMAvqF3OCKBpuc8YlmTTOk4an/auPbMhQT8YC8WJkE6w08K19L4LZnmmF9I6vGL5Blg==",
+        "previous_hash": "2c9917b19b210b6ec72de04e019d50dcd5c37b1f0a991877758e1e21f3a39254",
+        "hash": "2f7144ed0cfa0756741cef2450f3c5a0c6e6999228b8ff12bb48de408bf4be95"
+    },
+    {
+        "index": 4,
+        "timestamp": 1749192364.6126568,
+        "voter_id": 1,
+        "encrypted_vote": "fFJpneN1ozAGTv67hNeojq310U8jeF5km1c69yN/1Q==",
+        "signature": "MGUCMFiCxNRw6ez5fxBnNHbK/rkMDKWeaVqWiHQCElp9ru/l5TIN/YJPaipwINtdRm6avwIxANoeXFzxazvZQl71eDB6bgFurCS75L1ORlIFOrrm56QEouO48kJa97DxnlloBRH8hg==",
+        "previous_hash": "2f7144ed0cfa0756741cef2450f3c5a0c6e6999228b8ff12bb48de408bf4be95",
+        "hash": "a83d46068036bad3e69ecc1b6635bf44949dc1ae944bf5e07286ce102a4c0094"
+    }
+]

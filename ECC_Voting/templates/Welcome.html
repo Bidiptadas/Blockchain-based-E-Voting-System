@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Welcome to E-voting System</title>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .header-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+        .container {
+            padding: 40px;
+        }
+        h1,h3 {
+            color: #2c3e50;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #2980b9;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #1f6391;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to E-voting System!!</h1>
+        <h3>ECC Encryption</h3>
+        <p>Secure.Transparent,Easy to use</p>
+
+        <img src="{{url_for('static',filename='images/Evoting.png')}}" 
+        alt="Welcome banner" 
+        style="width: 100%; max-height: 500px; object-fit: contain; display: block; margin: 0 auto;">
+        Not registered?<a href="{{ url_for('form') }}" class="button">Register</a>
+        If already registered?<a href="{{ url_for('login') }}" class="button">Login</a>
+    </body>
+</html>

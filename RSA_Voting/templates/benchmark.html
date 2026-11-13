@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RSA vs ECC Benchmark</title>
+    <style>
+        table { border-collapse: collapse; width: 60%; margin: 40px auto; }
+        th, td { border: 1px solid #ccc; padding: 12px; text-align: center; }
+        th { background-color: #f2f2f2; }
+        h2 { text-align: center; margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <h2>RSA vs ECC Performance Benchmark (in seconds)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Time </th>
+                <th>Memory usage in KiB</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Key Generation</td>
+                <td>{{ '%.10f' | format(rsa_keygen) }}</td>
+                <td> {{ '%.2f' | format(rsa_gen_mem) }} </td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <a href="{{url_for('admin_dashboard')}}" class="button">Admin_dashboard</a>
+    <a href="{{url_for('Welcome')}}" class="button">Home</a>
+</body>
+</html>

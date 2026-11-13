@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <style>
+            .link-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* space between buttons */
+    margin-top: 20px;
+}
+
+.button {
+    display: grid;
+    padding: 12px 25px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #fff;
+    background-color: #2980b9;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    place-items:center;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+        </style>
+    </head>
+    <body>
+        {% extends 'base.html' %}
+
+        {% block title %}User Registration{% endblock %}
+
+        {% block content %}
+        <form method="post" action="/form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+          
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="role">Role:</label>
+            <select name="role" id="role" required>
+                <option value="voter">Voter</option>
+                <option value="admin">Admin</option>
+            </select><br><br>
+          
+            <input type="submit" value="Submit">
+
+          </form>
+          <a href="{{url_for('Welcome')}}" class="button">Home page</a>
+          {% endblock %}
+    </body>
+</html>

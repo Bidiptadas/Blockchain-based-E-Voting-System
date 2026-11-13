@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Decrypted Vote</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            }
+            .container {
+                max-width: 600px;
+                margin: auto;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                padding: 30px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+            .vote-box {
+                background-color: #f9f9f9;
+                padding: 15px;
+                border-radius: 5px;
+                margin-top: 20px;
+                font-size: 18px;
+                word-wrap: break-word;
+            }
+            .back-link {
+                display: inline-block;
+                margin-top: 20px;
+                text-decoration: none;
+                color: #007BFF;
+            }
+            .back-link:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Decoded Vote Data</h1>
+            <p>The following vote was successfully decrypted using admin's private key</p>
+            <div class="vote-box">
+                <strong>Decrypted vote:</strong><br><br>
+                {{vote}}
+            </div>
+            <a href="{{url_for('block_data')}}" class="back-link">Back to Block Data</a>
+        </div>
+    </body>
+</html>

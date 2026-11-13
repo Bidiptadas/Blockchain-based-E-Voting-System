@@ -1,0 +1,57 @@
+<!DOCTYPE html>>
+<html>
+    <head>
+        <title>Voting Ballot</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+         {% extends 'base.html' %}
+
+        {% block title %}User Registration{% endblock %}
+
+        {% block content %}
+        <h3> Vote for your candidate </h3>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+            <table>
+                <th>Select</th>
+                <th>Name</th>
+                <th>Party</th>
+                <th>Description</th>
+                <th>Image</th>
+                {% for c in candidates %}
+                    <tr>
+                        <td>
+                            <input type="radio" name="candidate" value="{{c['id']}}">
+                        </td>
+                        <td>
+                            {{ c['name'] }}
+                        </td>
+                        <td>
+                            {{ c['party'] }}
+                        </td>
+                        <td>
+                            {{ c['description'] }}
+                        </td>
+                        <td>
+                            {% if c['image'] %}
+                                <img src="{{ url_for('static', filename='images/' ~ c['image']) }}" width="100">
+                            {% else %}
+                                No image
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <button type="submit">Submit Vote</button>
+        </form>
+        {% endblock %}
+    </body>
+</html>

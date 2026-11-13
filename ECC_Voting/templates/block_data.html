@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Block Data</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                font-family: Arial, sans-serif;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                text-align: left;
+                padding: 8px;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            .button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #2980b9;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #1f6391;
+        }
+        </style>
+
+    </head>
+    <body>
+        {% extends 'base.html' %}
+
+        {% block title %}User Registration{% endblock %}
+
+        {% block content %}
+        <h2>Block data are here</h2>
+        <table border="1" cellpadding="10" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Timestamp</th>
+                    <th>Voter ID</th>
+                    <th>Signature</th>
+                    <th>Previous Hash</th>
+                    <th>Hash</th>
+                    {% if session.get('admin') %}
+                        <th>Actions</th>
+                    {% endif %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for block in chain %}
+                <tr>
+                    <td>{{ block.index }}</td>
+                    <td>{{ block.timestamp | datetimeformat }}</td>
+                    <td>{{ block.voter_id }}</td>
+                    <td class="wrap" >{{block.signature}}</td>
+                    <td class="wrap" >{{ block.previous_hash }}</td>
+                    <td class="wrap" >{{ block.hash }}</td>
+                    {% if session.get('admin') %}
+                    <td>
+                        <form method="GET" action="{{ url_for('decrypt', index=loop.index0 ) }}">
+                            <button type="submit">Decrypt Vote</button>
+                        </form>
+                    </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{url_for('admin_dashboard')}}" class="button">Admin_dashboard</a>
+        <a href="{{url_for('Welcome')}}" class="button">Home</a>
+        {% endblock %}
+    </body>
+</html>

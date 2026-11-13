@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <style>
+            .button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #2980b9;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #1f6391;
+        }
+        </style>
+    </head>
+    <body>
+        {% extends 'base.html' %}
+
+        {% block title %}User Registration{% endblock %}
+
+        {% block content %}
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" action="login">
+            <h2>Welcome to the e voting system</h2>
+            {% if error %}
+                <p style="color: red;">{{error}}</p>
+            {% endif %}
+            <label>Voter Id:</label>
+            <input type="text" name="voter_id" required><br><br>
+
+            <button type="submit">Login</button>
+        </form>
+        <a href="{{url_for('Welcome')}}" class="button">Home</a>
+        {% endblock %}
+    </body>
+</html>

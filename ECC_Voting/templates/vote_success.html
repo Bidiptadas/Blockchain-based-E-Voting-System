@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vote success</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <style>
+            .button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #2980b9;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #1f6391;
+        }
+        </style>
+    </head>
+    <body>
+        {% extends 'base.html' %}
+
+        {% block title %}User Registration{% endblock %}
+
+        {% block content %}
+            <h1>Thanks for voting</h1>
+            <h2>Your vote has been recorded successfully!!</h2>
+            <a href="{{url_for('Welcome')}}">Back to Home</a>
+            <a href="{{url_for('result')}}" class="button">Result</a>
+        {% endblock %}
+    </body>
+</html>
