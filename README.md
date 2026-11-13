@@ -155,8 +155,4 @@ Thank you to my guide, Prof. Dr. Sangyal L. Tamang, and the Department of Comput
 ## Author
 
 **Bidipta Das**
-B.Sc. Computer Science, St. Edmund's College, Shillong
 
-## License
-
-Add a license of your choice here (MIT is a common pick for student and research projects).
